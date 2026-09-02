@@ -199,7 +199,7 @@ function NotesPage() {
           <TextInput defaultValue={editing?.title ?? ""} placeholder="Note title" />
         </Field>
         <Field label="Subject">
-          <Select defaultValue={editing?.subjectId ?? subjects[0].id}>
+          <Select defaultValue={editing?.subjectId ?? subjects[0]!.id}>
             {subjects.map((s) => (
               <option key={s.id} value={s.id}>
                 {s.name}

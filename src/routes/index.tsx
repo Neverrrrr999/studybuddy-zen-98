@@ -52,7 +52,7 @@ function Dashboard() {
       title={`Good afternoon, ${student.name}`}
       subtitle="Tuesday, 17 March"
       action={
-        <Button asChild={false} className="hidden sm:inline-flex">
+        <Button className="hidden sm:inline-flex">
           <Plus className="size-4" /> New Task
         </Button>
       }
@@ -75,8 +75,8 @@ function Dashboard() {
         />
         <StatCard
           label="Next exam"
-          value={`${exams[0].daysLeft} days`}
-          hint={`${subjectName(exams[0].subjectId)} · Fri`}
+          value={`${exams[0]!.daysLeft} days`}
+          hint={`${subjectName(exams[0]!.subjectId)} · Fri`}
           accent
         />
         <StatCard
@@ -198,7 +198,7 @@ function Dashboard() {
                   className="rounded-xl border border-border bg-inset p-3 transition hover:-translate-y-0.5 hover:border-aurora/40"
                 >
                   <img
-                    src={note.images[0]}
+                    src={note.images[0]!}
                     alt={`Photo attached to ${note.title}`}
                     loading="lazy"
                     width={1024}

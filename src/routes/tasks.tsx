@@ -248,7 +248,7 @@ function TasksPage() {
           <TextInput defaultValue={editing?.title ?? ""} placeholder="What needs doing?" />
         </Field>
         <Field label="Subject">
-          <Select defaultValue={editing?.subjectId ?? subjects[0].id}>
+          <Select defaultValue={editing?.subjectId ?? subjects[0]!.id}>
             {subjects.map((s) => (
               <option key={s.id} value={s.id}>
                 {s.name}
